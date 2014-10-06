@@ -23,6 +23,8 @@ public class DummyTest {
     public void testWhoppingComplex() {
         try {
             Assert.assertEquals(10d, CalculationEngineFactory.defaultEngine().calculate("5+5"));
+            Assert.assertEquals(9.99d, CalculationEngineFactory.defaultEngine().calculate("3.33+6.66"));
+            Assert.assertEquals(0d, CalculationEngineFactory.defaultEngine().calculate("0+0"));
         } catch (CalculationException e) {
             Assert.fail("Exception happened " + e);
         }
